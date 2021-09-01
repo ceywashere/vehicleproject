@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %} Araç Listesi {% endblock title %}
+
+
+{% block body %}
+
+<div class="container">
+
+    <div class="row justify-content-md-center mt-5">
+        <div class="col col-lg-2"></div>
+
+        <div class="col-lg-8">
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Araç Adı</th>
+                <th>Marka</th>
+                <th>Plaka</th>
+                <th>Sürücü</th>
+                <th>Lokasyon</th>
+            </tr>
+            {% for vehicle in vehicles %}
+            <tr>
+                <td>{{ vehicle.pk }}</td>
+                <td>{{ vehicle.name }}</td>
+                <td>{{ vehicle.brand }}</td>
+                <td>{{ vehicle.plaka }}</td>
+                <td>{{ vehicle.driver }}</td>
+                <td>{{ vehicle.location }}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+        <div class="col col-lg-2"></div>
+
+    </div>
+
+
+</div>
+{% endblock body %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %} Araç Ekle {% endblock title %}
+
+{% block body %}
+
+<div class="container">
+
+
+    <div class="row justify-content-md-center mt-5">
+        <div class="col col-lg-3"></div>
+        <div class="col-lg-6">
+            <h1>Araç Ekle</h1>
+            {% if messages %}
+
+            {% for message in messages %}
+
+            <div {% if message.tags %} class="alert alert-{{ message.tags }}" role="alert" {% endif %}>
+                <strong>{{message}}</strong>
+            </div>
+
+            {% endfor %}
+
+            {% endif %}
+
+
+            <form method="POST" class="row g-3 mt-3">
+                {% csrf_token %}
+
+                <div class="col-12">
+                    <label for="{{ form.name.id_for_label }}" class="form-label">Name</label>
+                    {{ form.name }}
+                </div>
+
+                <div class="col-12">
+                    <label for="{{ form.brand.id_for_label }}" class="form-label">Brand</label>
+                    {{ form.brand }}
+                </div>
+
+                <div class="col-12">
+                    <label for="{{ form.plaka.id_for_label }}" class="form-label">Plaque</label>
+                    {{ form.plaka }}
+                </div>
+
+                <div class="col-12">
+                    <label for="{{ form.driver.id_for_label }}" class="form-label">Driver</label>
+                    {{ form.driver }}
+                </div>
+
+                <div class="col-12">
+                    <label for="{{ form.location.id_for_label }}" class="form-label">Location</label>
+                    {{ form.location }}
+                </div>
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Add Vehicle</button>
+                </div>
+            </form>
+        </div>
+        <div class="col col-lg-3"></div>
+
+
+    </div>
+</div>
+{% endblock body %}
+
+
