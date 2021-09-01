@@ -14,5 +14,5 @@ class Vehicle(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Araç'
-        verbose_name_plural = 'Araçlar'
+        verbose_name = 'Vehicle'
+        verbose_name_plural = 'Vehicles'

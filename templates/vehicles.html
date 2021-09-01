@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %} Araç Listesi {% endblock title %}
+{% block title %} Vehicle List {% endblock title %}
 
 
 {% block body %}
@@ -15,11 +15,11 @@
         <table>
             <tr>
                 <th>ID</th>
-                <th>Araç Adı</th>
-                <th>Marka</th>
-                <th>Plaka</th>
-                <th>Sürücü</th>
-                <th>Lokasyon</th>
+                <th>NAME</th>
+                <th>BRAND</th>
+                <th>PLAQUE</th>
+                <th>DRIVER</th>
+                <th>LOCATION</th>
             </tr>
             {% for vehicle in vehicles %}
             <tr>
