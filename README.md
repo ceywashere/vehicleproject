@@ -27,3 +27,8 @@ Admin Bilgileri:
 username : `ceyda`
 
 parola: `ceyda`
+
+
+Araç Ekleme
+
+![kayıt1](https://user-images.githubusercontent.com/89922805/131692555-52f4b832-0b74-4dbe-90f4-734d6a193d1a.png)
